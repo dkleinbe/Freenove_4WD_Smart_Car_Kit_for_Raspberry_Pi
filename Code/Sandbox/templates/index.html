@@ -22,10 +22,10 @@
             });
 			socket.on('frame', function(msg, cb) {
 				$('#video-frame').attr('src', 'data:image/jpg;base64,' + msg.frame);
-                
+                /*
 				$('#log').append('<br>' + $('<div/>').text('logs # FRAME').html());
                 if (cb)
-                    cb();
+                    cb();*/
             });
             $('form#emit').submit(function(event) {
                 socket.emit('my_event', {data: $('#emit_data').val()});
