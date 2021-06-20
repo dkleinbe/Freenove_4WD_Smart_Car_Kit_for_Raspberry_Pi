@@ -1,6 +1,6 @@
 from os import name
 import socketio
-from camera import Camera
+from camera_pi import Camera
 
 def on_aaa_response(args):
 	print('on_aaa_response', args['data'])
@@ -23,7 +23,7 @@ def disconnect():
 	exit()
 
 
-sio.connect('http://127.0.0.1:8000', namespaces='/test')	
+sio.connect('http://192.168.0.10:8000', namespaces='/test')	
 
 camera = Camera()
 while True:
